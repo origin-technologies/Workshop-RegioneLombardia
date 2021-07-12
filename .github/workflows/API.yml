@@ -47,7 +47,7 @@ jobs:
       with:
         app-name: 'regionelombardia-api'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_097ce565b14f4d90aeb2b8226c26bc9d }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_81bc1cfc34234f7cad1301079ab15be4 }}
         package: .
         
   test:
