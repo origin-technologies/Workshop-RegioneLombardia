@@ -22,7 +22,7 @@ namespace RegioneLombardia.FunctionApp
         {
             _appInfo = browserInfo;
         }
-
+        
         [FunctionName("GeneratePdf")]
         public async Task Run([QueueTrigger("applications")] string myQueueItem, ILogger log)
         {
@@ -97,4 +97,3 @@ namespace RegioneLombardia.FunctionApp
         }
     }
 }
-

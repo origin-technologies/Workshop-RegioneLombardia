@@ -14,7 +14,6 @@ using RegioneLombardia.Models.Store;
 using RegioneLombardia.Models.Interfaces;
 
 [assembly: FunctionsStartup(typeof(RegioneLombardia.FunctionApp.Startup))]
-
 namespace RegioneLombardia.FunctionApp
 {
     public class Startup : FunctionsStartup

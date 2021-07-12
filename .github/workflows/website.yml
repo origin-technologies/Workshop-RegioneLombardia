@@ -5,7 +5,7 @@ on:
     paths:
       - src/Website/**
     branches:
-      - main
+      - master
 
 env:
   WORKING_DIRECTORY: './src/Website/'
@@ -32,5 +32,5 @@ jobs:
       with:
         app-name: 'regionelombardia-web'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_9a146e013b3044e8bd30c6322d66f25c }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_d58f1c4a6cc740649958da36bcd5b528 }}
         package: ${{ env.WORKING_DIRECTORY }}
