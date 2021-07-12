@@ -5,7 +5,7 @@ on:
     paths:
       - src/Website/**
     branches:
-      - main
+      - master
 
 env:
   WORKING_DIRECTORY: './src/Website/'
