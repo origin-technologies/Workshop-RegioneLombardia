@@ -1,0 +1,124 @@
+{
+    "types": [
+        {
+            "Id": 1,
+            "Name": "Bando"
+        },
+        {
+            "Id": 2,
+            "Name": "Manifestazione di Interesse"
+        },
+        {
+            "Id": 3,
+            "Name": "Gare Beni e Servizi"
+        }
+    ],
+    "noticecategories": [
+        {
+            "IdNotice": 1,
+            "IdCategory": 1
+        },
+        {
+            "IdNotice": 1,
+            "IdCategory": 2
+        },
+        {
+            "IdNotice": 3,
+            "IdCategory": 3
+        },
+        {
+            "IdNotice": 4,
+            "IdCategory": 1
+        },
+        {
+            "IdNotice": 11,
+            "IdCategory": 3
+        },
+        {
+            "IdNotice": 12,
+            "IdCategory": 2
+        },
+        {
+            "IdNotice": 14,
+            "IdCategory": 4
+        }
+    ],
+    "categories": [
+        {
+            "Id": 1,
+            "Name": "Cittadini"
+        },
+        {
+            "Id": 2,
+            "Name": "Imprese"
+        },
+        {
+            "Id": 3,
+            "Name": "Enti e operatori"
+        },
+        {
+            "Id": 4,
+            "Name": "Concorsi pubblici"
+        },
+        {
+            "Id": 5,
+            "Name": "In apertura"
+        }
+    ],
+    "notices": [
+        {
+            "Id": 1,
+            "Code": "RLD12021019722",
+            "Name": "Avviso per l’adesione dei Comuni alla misura Nidi Gratis - Bonus 2021-2022",
+            "Description": "Possono partecipare al presente Avviso i Comuni in forma singola o associata (ad esempio i Consorzi di Comuni, le Unioni di Comuni e le Comunità Montane). Nel caso di presentazione in forma di Ufficio di Piano, l’Ente Capofila presenta la domanda assumendo la funzione di referente unico per tutti i Comuni aderenti all’Ambito; pertanto, tutti gli adempimenti relativi alla Misura sono in capo all’ente capofila ed è inibita la presentazione della domanda da parte del singolo Comune.\r\n\r\nI requisiti che devono possedere i Comuni sono i seguenti:\r\n\r\nCompartecipare alla spesa per i servizi per la prima infanzia (asili nido/micro-nidi) Per “compartecipazione alla spesa” si intende ogni risorsa attivata dal Comune per assicurare il funzionamento dei servizi per la prima infanzia, migliorarne la qualità/capacità di risposta ai bisogni delle famiglie o favorire l’accesso ai servizi da parte delle famiglie.\r\nAdottare agevolazioni tariffarie, differenziate in base all’ISEE, a favore delle famiglie, per la frequenza dei bambini ai servizi per la prima infanzia (asili nido/micro-nidi a titolarità pubblica o privati autorizzati).\r\nIn relazione a tale requisito, si specifica che i Comuni con asili nido/micro-nidi comunali, che al momento della pubblicazione del presente Avviso non si siano già Deliberazione di approvazione delle Tariffe o Documento equivalente, dovranno necessariamente adottarlo prima della presentazione della domanda di adesione alla Misura.\r\n\r\nEssere titolari in forma singola o associata di nidi e/o micro-nidi pubblici e/o di avere sottoscritto convenzioni per l’annualità 2021-2022 per l’acquisto di posti in convenzione con asili nido e/o micro-nidi privati autorizzati.\r\nIn relazione a tale requisito, si specifica che i Comuni con asili nido/micro-nidi privati autorizzati, che al momento della pubblicazione del presente Avviso non si siano già dotati di convenzione per l’acquisto dei relativi posti per l’annualità 2021-2022 dovranno necessariamente perfezionarla prima della presentazione della domanda di adesione alla Misura. La convenzione deve prevedere la copertura dell’intero anno educativo 2021-2022. Qualora la convenzione scada successivamente alla data di presentazione della domanda di adesione e prima del 31 luglio 2022, il Comune dovrà impegnarsi in fase di adesione a sottoscrivere alla scadenza della stessa una nuova convenzione, a copertura dell’anno educativo e alle medesime condizioni della convenzione in essere alla data di presentazione della domanda.\r\n\r\nNon aver applicato per l’annualità 2021-2022 aumenti di tariffe rispetto all’annualità 2020- 2021 ad eccezione delle seguenti fattispecie:\r\nadeguamenti della quota di retta a carico della famiglia con aumenti entro il 5%;\r\narrotondamenti dell’importo della retta all’euro per eccesso o per difetto;\r\naumenti delle rette per le fasce ISEE superiori a € 20.000,00;\r\nSaranno oggetto di specifica valutazione in fase di istruttoria le variazioni delle rette determinate al verificarsi delle seguenti fattispecie:\r\ncambio di gestione del servizio (per esempio, da pubblico a privato o viceversa);\r\ncambio delle modalità di calcolo delle rette (per esempio, da scaglioni ISEE a funzione lineare).",
+            "AvailablityStartDate": "2021-07-05T00:00:00",
+            "AvailablityEndDate": "2021-10-10T00:00:00",
+            "IdType": 1
+        },
+        {
+            "Id": 3,
+            "Code": "RLO12021019946",
+            "Name": "Finestra 5, Province: Como, Sondrio, Varese - Avviso a favore degli intermediari del commercio",
+            "Description": "Apertura 07/07/2021, ore 11:00. Province: Como, Sondrio, Varese. Avviso a favore degli intermediari del commercio per la concessione di contributi pari al valore della tassa automobilistica pagata nel periodo tributario avente decorrenza nell’anno 2020 - Finestra 5",
+            "AvailablityStartDate": "2021-07-07T00:00:00",
+            "AvailablityEndDate": "2021-07-14T00:00:00",
+            "IdType": 2
+        },
+        {
+            "Id": 4,
+            "Code": "RLT12021020242",
+            "Name": "Rinnova Veicoli Enti pubblici - Anno 2021",
+            "Description": "In attuazione della d.G.R n. 4758/2021, Regione Lombardia favorisce il rinnovo del parco veicolare dei soggetti pubblici della Lombardia con veicoli di categoria M1, M2, N1 e N2 (art.47 del Codice della Strada - d.lgs. n. 285/92) a bassissime o zero emissioni destinati al trasporto di persone o di merci, privilegiando la demolizione di veicoli a benzina fino ad Euro 2/II incluso o diesel fino ad Euro 5/V incluso.",
+            "AvailablityStartDate": "2021-07-07T00:00:00",
+            "AvailablityEndDate": "2021-10-29T00:00:00",
+            "IdType": 1
+        },
+        {
+            "Id": 11,
+            "Code": "RLAM2021020382",
+            "Name": "FEC 50/2021 Richiesta di preventivo",
+            "Description": "Codice Identificativo Gara : C.I.G. CODICE CIG ZDD3258ACF – CODICE CUP E85C18000010008",
+            "AvailablityStartDate": "2021-06-07T00:00:00",
+            "AvailablityEndDate": "2021-07-19T00:00:00",
+            "IdType": 3
+        },
+        {
+            "Id": 12,
+            "Code": "RLO12021019945",
+            "Name": "NUFinestra 4, Province: Brescia - Avviso a favore degli intermediari del commercioLL",
+            "Description": "Apertura 06/07/2021, ore 15:00. Province: Brescia. Avviso a favore degli intermediari del commercio per la concessione di contributi pari al valore della tassa automobilistica pagata nel periodo tributario avente decorrenza nell’anno 2020 - Finestra 4",
+            "AvailablityStartDate": "2021-06-07T00:00:00",
+            "AvailablityEndDate": "2021-07-14T00:00:00",
+            "IdType": 1
+        },
+        {
+            "Id": 14,
+            "Code": "RLO12021019944",
+            "Name": "Finestra 3, Province: Milano - Avviso a favore degli intermediari del commercio",
+            "Description": "Apertura 06/07/2021, ore 11:00. Province: Milano. Avviso a favore degli intermediari del commercio per la concessione di contributi pari al valore della tassa automobilistica pagata nel periodo tributario avente decorrenza nell’anno 2020 - Finestra 3",
+            "AvailablityStartDate": "2021-06-07T00:00:00",
+            "AvailablityEndDate": "2021-07-14T00:00:00",
+            "IdType": 1
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+﻿@page
+@model IndexModel
+
+<div class="text-center">
+  <div class="logo">
+    <img class="logo" src="images/regionelombardialogo.jpg" />
+  </div>
+  @if (Model.Notice == null)
+  {
+    <div>
+      <form id="application-form" method="post">
+        <textarea name="application" id="application-box"></textarea>
+        <textarea name="notice" id="notice-box"></textarea>
+        <input type="submit" id="submit-button" value="Submit" />
+      </form>
+    </div>
+  }
+  else
+  {
+    <div>
+      <div style="margin-bottom: 48px;" class="row">
+        <div class="column" style="text-align: left;">
+          <b>Codice bando: </b>@Model.Notice.Code<br/>
+          <b>Nome: </b>@Model.Notice.Name<br/>
+          Dispnibile dal <b>@Model.Notice.AvailablityStartDate.ToString("dd/MM/yyyy")</b> al <b>@Model.Notice.AvailablityEndDate.ToString("dd/MM/yyyy")</b><br/>
+        </div>
+        <div class="column" style="text-align: right;">
+          Applicante: @Model.Application.Name @Model.Application.Surname<br/>
+          Telefono: @Model.Application.Phone<br/>
+        </div>
+      </div>
+      <div style="margin-bottom: 48px;" class="row">
+           @Model.Notice.Description<br/>
+      </div>
+    </div>
+  }
+</div>

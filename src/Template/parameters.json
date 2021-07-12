@@ -1,0 +1,84 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "vulnerabilityAssessments_Default_storageContainerPath": {
+            "value": null
+        },
+        "connections_office365_name": {
+            "value": null
+        },
+        "sites_regionelombardia_api_name": {
+            "value": null
+        },
+        "sites_regionelombardia_web_name": {
+            "value": null
+        },
+        "connections_sharepointonline_name": {
+            "value": null
+        },
+        "servers_regionelombardia_server_name": {
+            "value": null
+        },
+        "sites_regionelombardia_function_name": {
+            "value": null
+        },
+        "components_regionelombardia_api_name": {
+            "value": null
+        },
+        "components_regionelombardia_web_name": {
+            "value": null
+        },
+        "workflows_regionelombardia_logicapp_name": {
+            "value": null
+        },
+        "storageAccounts_regionelombardiasa_name": {
+            "value": null
+        },
+        "components_regionelombardia_function_name": {
+            "value": null
+        },
+        "serverfarms_regionelombardia_api_asp_workshop_name": {
+            "value": null
+        },
+        "serverfarms_regionelombardia_asp_web_workshop_name": {
+            "value": null
+        },
+        "serverfarms_ASP_regionelombardiaweworkshop_82a9_name": {
+            "value": null
+        },
+        "actionGroups_Application_Insights_Smart_Detection_name": {
+            "value": null
+        },
+        "smartdetectoralertrules_failure_anomalies___regionelombardia_api_name": {
+            "value": null
+        },
+        "smartdetectoralertrules_failure_anomalies___regionelombardia_web_name": {
+            "value": null
+        },
+        "smartdetectoralertrules_failure_anomalies___regionelombardia_function_name": {
+            "value": null
+        },
+        "smartdetectoralertrules_failure_anomalies___regionelombardia_we_insight_name": {
+            "value": null
+        },
+        "smartdetectoralertrules_failure_anomalies___regionelombardia_we_functions_name": {
+            "value": null
+        },
+        "actiongroups_application_insights_smart_detection_externalid": {
+            "value": null
+        },
+        "components_regionelombardia_we_functions_externalid": {
+            "value": null
+        },
+        "components_regionelombardia_we_insight_externalid": {
+            "value": null
+        },
+        "workspaces_defaultworkspace_1277c11d_e9b2_4769_a8f0_2be07bb87af7_weu_externalid": {
+            "value": null
+        },
+        "workspaces_defaultworkspace_1277c11d_e9b2_4769_a8f0_2be07bb87af7_neu_externalid": {
+            "value": null
+        }
+    }
+}

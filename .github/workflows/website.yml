@@ -1,0 +1,36 @@
+name: Build and deploy Web
+
+on:
+  push:
+    paths:
+      - src/Website/**
+    branches:
+      - main
+
+env:
+  WORKING_DIRECTORY: './src/Website/'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Node.js version
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14.x'
+    - name: yarn install, build, and test
+      run: |
+        #npm install
+        yarn install
+        yarn build 
+        #yarn test
+      working-directory: ${{ env.WORKING_DIRECTORY }}
+    - name: 'Deploy to Azure Web App'
+      id: deploy-to-webapp
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'regionelombardia-web'
+        slot-name: 'production'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_9a146e013b3044e8bd30c6322d66f25c }}
+        package: ${{ env.WORKING_DIRECTORY }}
