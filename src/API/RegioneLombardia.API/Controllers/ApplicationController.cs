@@ -3,6 +3,7 @@ using Azure.Storage.Queues;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using RegioneLombardia.Models.Store;
+using RegioneLombardia.ViewModels.Store;
 
 namespace RegioneLombardia.API.Controllers
 {
@@ -19,9 +20,18 @@ namespace RegioneLombardia.API.Controllers
         }
         [HttpPost]
         [Route("Apply")]
-        public void Apply(Application application)
+        public void Apply(ViewModels.Store.Application application)
         {
-            int applicationId = Application.AddApplication(_context, application);
+            var applicationToAdd = new Models.Store.Application()
+            {
+                IdNotice = application.IdNotice,
+                Name = application.Name,
+                Surname = application.Surname,
+                Email = application.Email,
+                Phone = application.Phone,
+                Archived = application.Archived
+            };
+            int applicationId = Models.Store.Application.AddApplication(_context, applicationToAdd);
             string connectionString = _configuration[ConfigurationPath.Combine("ConnectionStrings", "StorageConnectionString")];
             QueueClient queueClient = new QueueClient(connectionString, "applications");
             queueClient.CreateIfNotExists();

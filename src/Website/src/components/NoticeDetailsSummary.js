@@ -48,25 +48,25 @@ export default class NoticeDetailsSummary extends Component {
                                             <ul className="list-inline">
                                                 <li className="list-inline-item">
                                                     <a className="share-popup" target="_blank" title="Condividi questa pagina su Facebook" href="/" rel="nofollow noopener noreferrer">
-                                                        <LogoFacebook className="icon rounded-circle icon-white primary-bg-b2 p-1" />
+                                                        <LogoFacebook className="icon rounded-circle primary-bg-b2 p-1" color="#FFFFFF"/>
                                                         <span className="sr-only">Condividi questa pagina su Facebook</span>
                                                     </a>
                                                 </li>
                                                 <li className="list-inline-item">
                                                     <a className="share-popup" target="_blank" title="Condividi questa pagina su Twitter" href="/" rel="nofollow noopener noreferrer">
-                                                        <LogoTwitter className="icon rounded-circle icon-white primary-bg-c5 p-1" />
+                                                        <LogoTwitter className="icon rounded-circle primary-bg-c5 p-1" color="#FFFFFF" />
                                                         <span className="sr-only">Condividi questa pagina su Twitter</span>
                                                     </a>
                                                 </li>
                                                 <li className="list-inline-item">
                                                     <a className="share-popup" target="_blank" title="Condividi questa pagina su Linkedin" href="/" rel="nofollow noopener noreferrer">
-                                                        <LogoLinkedin className="icon rounded-circle icon-white primary-bg-a5 p-1" />
+                                                        <LogoLinkedin className="icon rounded-circle primary-bg-a5 p-1" color="#FFFFFF" />
                                                         <span className="sr-only">Condividi questa pagina su Linkedin</span>
                                                     </a>
                                                 </li>
                                                 <li className="list-inline-item">
                                                     <a title="Condividi questa pagina via posta elettronica" href="/" rel="nofollow noopener noreferrer">
-                                                        <Mail className="icon rounded-circle icon-white neutral-2-bg-a4 p-1" />
+                                                        <Mail className="icon rounded-circle neutral-2-bg-a4 p-1" color="#FFFFFF" />
                                                         <span className="sr-only">Condividi questa pagina via posta elettronica</span>
                                                     </a>
                                                 </li>

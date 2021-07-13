@@ -16,5 +16,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Shared\RegioneLombardia.Models\RegioneLombardia.Models.csproj" />
+    <ProjectReference Include="..\..\Shared\RegioneLombardia.ViewModels\RegioneLombardia.ViewModels.csproj" />
   </ItemGroup>
 </Project>

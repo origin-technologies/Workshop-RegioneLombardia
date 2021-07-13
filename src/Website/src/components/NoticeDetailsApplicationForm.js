@@ -84,7 +84,7 @@ export default class NoticeDetailsApplicationForm extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" disabled={!this.state.applied} className="btn btn-lg btn-submit-form btn-primary">Invia</button>
+                            <button type="submit" disabled={this.state.applied} className="btn btn-lg btn-submit-form btn-primary">Invia</button>
                         </fieldset>
                     </form>
                 </div>
@@ -96,7 +96,7 @@ export default class NoticeDetailsApplicationForm extends Component {
                         Congratulazioni! La tua candidatura e' stata ricevuta con successo.
                     </ModalBody>
                     <ModalFooter>
-                        <Button color="primary" onClick={this.state.modalVisible}>Cancel</Button>
+                        <Button color="primary" onClick={this.toggleModal}>Cancel</Button>
                     </ModalFooter>
                 </Modal>
             </section>
