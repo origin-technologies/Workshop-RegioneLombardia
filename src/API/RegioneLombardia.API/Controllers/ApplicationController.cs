@@ -44,4 +44,3 @@ namespace RegioneLombardia.API.Controllers
         }
     }
 }
-
