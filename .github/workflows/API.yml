@@ -32,10 +32,6 @@ jobs:
   security:
     runs-on: windows-latest
     needs: build
-    strategy:
-      fail-fast: false
-      matrix:
-        language: [ 'csharp', 'javascript' ]
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
@@ -44,7 +40,7 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v1
         with:
-          languages: ${{ matrix.language }}
+          languages: 'csharp'
       - name: Autobuild
         uses: github/codeql-action/autobuild@v1
       - name: Perform CodeQL Analysis
