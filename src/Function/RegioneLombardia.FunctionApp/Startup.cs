@@ -43,9 +43,11 @@ namespace RegioneLombardia.FunctionApp
             {
                 BrowserExecutablePath = bf.GetExecutablePath(BrowserFetcher.DefaultRevision)
             };
+            
             var port = GetAvailablePort();
             info.TemplateServerPort = port;
             builder.Services.AddSingleton(info);
+            
             var webHost = Host.CreateDefaultBuilder()
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
