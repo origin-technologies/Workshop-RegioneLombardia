@@ -8,8 +8,8 @@ on:
       - src/Function/**
 
 env:
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: '.' # set this to the path to your web app project, defaults to the repository root
-  DOTNET_VERSION: '3.1.301'  # set this to the dotnet version to use
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: '.'
+  DOTNET_VERSION: '3.1.301' 
   WORKING_DIRECTORY: './src/Function'
 
 jobs:
@@ -28,16 +28,6 @@ jobs:
         pushd '${{ env.WORKING_DIRECTORY }}/RegioneLombardia.FunctionApp'
         dotnet build --configuration Release --output ./output
         popd
-
-    - name: Initialize CodeQL
-      uses: github/codeql-action/init@v1
-      with:
-        languages: 'csharp'
-    - name: Autobuild
-      uses: github/codeql-action/autobuild@v1
-    - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v1
-
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v2
       with:
