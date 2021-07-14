@@ -46,7 +46,7 @@ jobs:
 
   deploy:
     runs-on: windows-latest
-    needs: security
+    needs: build
     steps:
     - name: Download artifact from build job
       uses: actions/download-artifact@v2
