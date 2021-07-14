@@ -40,6 +40,7 @@ namespace RegioneLombardia.API
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "RegioneLombardia.API", Version = "v1" });
             });
         }
+        
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
