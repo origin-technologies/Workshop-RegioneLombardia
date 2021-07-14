@@ -23,28 +23,21 @@ jobs:
       run: dotnet build ${{ env.WORKING_DIRECTORY }}/RegioneLombardia.API/RegioneLombardia.API.csproj --configuration Release
     - name: dotnet publish
       run: dotnet publish ${{ env.WORKING_DIRECTORY }}/RegioneLombardia.API/RegioneLombardia.API.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
+    
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v1
+      with:
+        languages: 'csharp'
+    - name: Autobuild
+      uses: github/codeql-action/autobuild@v1
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v1
+    
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v2
       with:
         name: application
         path: ${{env.DOTNET_ROOT}}/myapp
-
-  security:
-    runs-on: windows-latest
-    needs: build
-    steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v2
-        with:
-          name: application
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v1
-        with:
-          languages: 'csharp'
-      - name: Autobuild
-        uses: github/codeql-action/autobuild@v1
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v1
 
   deploy:
     runs-on: windows-latest

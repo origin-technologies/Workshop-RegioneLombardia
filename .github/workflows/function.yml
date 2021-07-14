@@ -28,30 +28,21 @@ jobs:
         pushd '${{ env.WORKING_DIRECTORY }}/RegioneLombardia.FunctionApp'
         dotnet build --configuration Release --output ./output
         popd
+
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v1
+      with:
+        languages: 'csharp'
+    - name: Autobuild
+      uses: github/codeql-action/autobuild@v1
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v1
+
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v2
       with:
         name: application
         path: ${{ env.WORKING_DIRECTORY }}/RegioneLombardia.FunctionApp/output
-
-  security:
-    runs-on: windows-latest
-    needs: build
-    steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v2
-        with:
-          name: application
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v1
-        with:
-          languages: 'csharp'
-      - name: Build
-        run: |
-          make bootstrap
-          make release
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v1
 
   deploy:
     runs-on: windows-latest

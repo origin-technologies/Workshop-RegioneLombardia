@@ -6,4 +6,3 @@
         public int TemplateServerPort { get; set; }
     }
 }
-
