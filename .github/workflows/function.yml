@@ -20,7 +20,7 @@ jobs:
       uses: actions/checkout@v2
       
     - name: Run security analysis
-      uses: ./.github/workflows/code-analysis.yaml
+      uses: ./.github/workflows/code-analysis
         
     - name: Setup DotNet ${{ env.DOTNET_VERSION }} Environment
       uses: actions/setup-dotnet@v1
