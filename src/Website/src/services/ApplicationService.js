@@ -9,7 +9,7 @@ class ApplicationService {
                 'Access-Control-Allow-Origin':'*'
             },
             body: JSON.stringify({
-                idNotice: idNotice,
+                idNotice: parseInt(idNotice),
                 name: name,
                 surname: surname,
                 email: email,
