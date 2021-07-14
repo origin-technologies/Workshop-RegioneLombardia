@@ -33,6 +33,7 @@ namespace RegioneLombardia.FunctionApp
                 Headless = true,
                 ExecutablePath = _appInfo.BrowserExecutablePath
             });
+            
             var page = await browser.NewPageAsync();
             await page.GoToAsync($"http://localhost:{_appInfo.TemplateServerPort}/");
      
