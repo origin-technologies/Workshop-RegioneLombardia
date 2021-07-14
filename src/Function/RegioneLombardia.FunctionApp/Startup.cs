@@ -43,11 +43,9 @@ namespace RegioneLombardia.FunctionApp
             {
                 BrowserExecutablePath = bf.GetExecutablePath(BrowserFetcher.DefaultRevision)
             };
-
             var port = GetAvailablePort();
             info.TemplateServerPort = port;
             builder.Services.AddSingleton(info);
-
             var webHost = Host.CreateDefaultBuilder()
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
@@ -59,7 +57,6 @@ namespace RegioneLombardia.FunctionApp
                     webBuilder.UseUrls($"http://0.0.0.0:{port}").UseStartup<RegioneLombardia.Templates.Startup>();
                 })
                 .Build();
-
             webHost.Start();
         }
         private int GetAvailablePort()
