@@ -21,7 +21,8 @@ namespace RegioneLombardia.FunctionApp
         public GeneratePdf(AppInfo browserInfo)
         {
             _appInfo = browserInfo;
-        }      
+        }    
+        
         [FunctionName("GeneratePdf")]
         public async Task Run([QueueTrigger("applications")] string myQueueItem, ILogger log)
         {
@@ -32,6 +33,7 @@ namespace RegioneLombardia.FunctionApp
                 Headless = true,
                 ExecutablePath = _appInfo.BrowserExecutablePath
             });
+            
             var page = await browser.NewPageAsync();
             await page.GoToAsync($"http://localhost:{_appInfo.TemplateServerPort}/");
      
