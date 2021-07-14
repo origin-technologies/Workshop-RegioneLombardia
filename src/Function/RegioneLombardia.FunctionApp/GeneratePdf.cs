@@ -21,7 +21,8 @@ namespace RegioneLombardia.FunctionApp
         public GeneratePdf(AppInfo browserInfo)
         {
             _appInfo = browserInfo;
-        }      
+        }    
+        
         [FunctionName("GeneratePdf")]
         public async Task Run([QueueTrigger("applications")] string myQueueItem, ILogger log)
         {
