@@ -18,6 +18,7 @@ namespace RegioneLombardia.API.Controllers
             _context = context;
             _configuration = configuration;
         }
+        
         [HttpPost]
         [Route("Apply")]
         public void Apply(ViewModels.Store.Application application)

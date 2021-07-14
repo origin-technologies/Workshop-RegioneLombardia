@@ -13,14 +13,14 @@ env:
   WORKING_DIRECTORY: './src/Function'
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
     - name: 'Checkout GitHub Action'
       uses: actions/checkout@v2
       
     - name: Run security analysis
-      uses: ./.github/workflows/code-analysis.yaml
+      uses: ./.github/workflows/code-analysis
         
     - name: Setup DotNet ${{ env.DOTNET_VERSION }} Environment
       uses: actions/setup-dotnet@v1
@@ -32,12 +32,46 @@ jobs:
         pushd '${{ env.WORKING_DIRECTORY }}/RegioneLombardia.FunctionApp'
         dotnet build --configuration Release --output ./output
         popd
+    - name: Upload artifact for deployment job
+      uses: actions/upload-artifact@v2
+      with:
+        name: application
+        path: ${{ env.WORKING_DIRECTORY }}/RegioneLombardia.FunctionApp/output
 
+  security:
+    runs-on: windows-latest
+    needs: build
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'csharp' ]
+    steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v2
+        with:
+          name: application
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v1
+        with:
+          languages: ${{ matrix.language }}
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v1
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v1
+
+  deploy:
+    runs-on: windows-latest
+    needs: security
+    steps:
+    - name: Download artifact from build job
+      uses: actions/download-artifact@v2
+      with:
+        name: application
     - name: 'Run Azure Functions Action'
       uses: Azure/functions-action@v1
       id: fa
       with:
         app-name: 'regionelombardia-function'
         slot-name: 'production'
-        package: '${{ env.WORKING_DIRECTORY }}/RegioneLombardia.FunctionApp/output'
+        package: .
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_d8d037c6a4cf4087aeeaeccc04fbe149 }}

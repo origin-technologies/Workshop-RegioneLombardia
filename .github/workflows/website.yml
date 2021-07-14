@@ -26,6 +26,41 @@ jobs:
         yarn build 
         #yarn test
       working-directory: ${{ env.WORKING_DIRECTORY }}
+    - name: Upload artifact for deployment job
+      uses: actions/upload-artifact@v2
+      with:
+        name: application
+        path: ${{ env.WORKING_DIRECTORY }}
+
+  security:
+    runs-on: windows-latest
+    needs: build
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'javascript' ]
+    steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v2
+        with:
+          name: application
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v1
+        with:
+          languages: ${{ matrix.language }}
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v1
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v1
+
+  deploy:
+    runs-on: windows-latest
+    needs: security
+    steps:
+    - name: Download artifact from build job
+      uses: actions/download-artifact@v2
+      with:
+        name: application
     - name: 'Deploy to Azure Web App'
       id: deploy-to-webapp
       uses: azure/webapps-deploy@v2
@@ -33,4 +68,4 @@ jobs:
         app-name: 'regionelombardia-web'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_d58f1c4a6cc740649958da36bcd5b528 }}
-        package: ${{ env.WORKING_DIRECTORY }}
+        package: .
