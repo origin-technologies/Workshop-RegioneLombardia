@@ -20,6 +20,7 @@ namespace RegioneLombardia.FunctionApp
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddApplicationInsightsTelemetry();
             var sqlConnectionString = Environment.GetEnvironmentVariable("DefaultConnectionString");
             var useInMemoryDatabase = string.IsNullOrWhiteSpace(sqlConnectionString);
             if (useInMemoryDatabase)
