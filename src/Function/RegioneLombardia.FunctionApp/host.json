@@ -2,7 +2,7 @@
     "version": "2.0",
     "logging": {
         "applicationInsights": {
-            "InstrumentationKey": "36ec925a-1fda-4884-a591-f1096536aeb5"
+            "InstrumentationKey": "36ec925a-1fda-4884-a591-f1096536aeb5",
             "samplingSettings": {
                 "isEnabled": true,
                 "excludedTypes": "Request"
