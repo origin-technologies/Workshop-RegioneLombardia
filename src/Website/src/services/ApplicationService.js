@@ -15,7 +15,7 @@ class ApplicationService {
                 email: email,
                 phone: phone
             })
-        })
+        }) 
         // .then(res => res.json());        
     }
 }
