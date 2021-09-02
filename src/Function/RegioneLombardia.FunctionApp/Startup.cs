@@ -30,8 +30,7 @@ namespace RegioneLombardia.FunctionApp
             services.AddDbContext<ApplicationDbContext>();
             services.AddTransient<IApplicationDbContext>(x => new ApplicationDbContext(sqlConnectionString));
             services.AddTransient(x => new ApplicationDbContext(sqlConnectionString));
-        }
-        
+        }       
         public override void Configure(IFunctionsHostBuilder builder)
         {
             var bfOptions = new BrowserFetcherOptions();
